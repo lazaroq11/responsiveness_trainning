@@ -1,0 +1,280 @@
+body {
+   
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
+}
+
+h1,h2,h3 {
+    font-family: Asap, sans-serif;
+    color: #000000;
+}
+
+.botao {
+    color:#FFFFFF;
+    text-decoration:none;
+    padding:10px 30px;
+    background-color:#191970;
+    font-size:.9em;
+    border-radius: 3px;
+}
+
+
+
+
+/* menu */
+
+nav {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    background-color:black;
+}
+
+nav > a {
+    text-decoration:none;
+    color:#ffffff;
+    font-weight:800;
+    font-size:32px;
+    font-family:YellowTail,serif;
+}
+
+nav ul {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    list-style:none;
+    padding:0;
+    width:100%; /* *RESPONSIVIDADE* Menu ocupa 100% da largura do browser ou celular*/
+}
+
+nav ul li {
+    text-align:center;
+    width:100%;
+
+}
+
+nav ul li a {
+
+    display:inline-block;
+    padding:10px 0;
+    width:100%;
+    text-decoration:none;
+    color:#FFFFFF
+}
+
+
+/*cabeçalho */
+
+header {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    background-image:url("../img/camera.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    color:#FFFFFF;
+    text-align:center;
+    padding:20px;
+
+
+}
+
+
+header h1 {
+    color:#FFFFFF;
+
+}
+
+
+header p {
+    margin-bottom:2em
+}
+
+
+/*sobre */
+
+#sobre {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:10px 10px 20px 20px;
+    background-color: gray;
+    color: #FFFFFF
+}
+
+
+#sobre h2 {
+    color: #FFFFFF;
+
+}
+
+#sobre p {
+     margin-bottom:2.5em;
+     max-width:1000px;
+}
+
+#sobre .botao {
+    background-color:#f1f1f1;
+    color:#1c1c1c;  
+}
+
+/* serviços*/
+
+#serviços {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:30px;
+}
+
+
+#serviços div {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    margin-top:30px;
+}
+
+
+/*fotos*/
+
+#fotos {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:20px;
+}
+
+#fotos h2 {
+    margin-bottom:20px;
+}
+
+#fotos img {
+    width:100%;
+}
+
+/*contato */
+
+#contato {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+
+}
+
+#contato h2 {
+    color: #000000;
+
+}
+
+/*footer */
+
+footer {
+    text-align:center;
+    padding:10px;
+    background-color:gray;
+    color:#FFFFFF;
+}
+
+footer a {
+    text-decoration:none;
+    color:black;
+}
+
+
+/*media queries responsaveis pela responsividade do site que se modifica de acordo com a tela que 
+esta sendo exibido*/
+@media screen and (min-width:768px) {
+        
+        /*nav*/
+
+        nav {
+
+            flex-direction:row;
+            justify-content:space-around;
+        }
+
+        nav ul {
+            flex-direction:row;
+            width:70%;
+
+        }
+
+        /*header */
+
+        header {
+             height:600px;
+             height:60vh; /*vh é uma altura dinamica*/
+             justify-content:center;
+
+        }
+
+        /* sobre */
+
+        #sobre {
+            height:250px;
+            height:30vh;
+            justify-content:center;
+            min-height:250px;
+        }
+
+        /*serviços*/
+
+        #serviços {
+            flex-direction:row;
+            flex-wrap: wrap; /*quebra de linha*/
+            align-items: flex-start; /*inicia a partir do flex*/
+            max-width:1000px;
+            margin:0 auto /*ajusta automaticamente a distância entre esquerda e direita*/
+        }
+
+        #serviços h2 {
+            text-align:center;
+            width:100%;
+        }
+
+        #serviços div {
+            flex-grow:1;
+            flex-basis:150px; /*define um tamanho maximo para todas as flexs*/
+            padding:0 10px; /*espaçamento entre as flexs*/       
+        }
+
+        /*fotos */
+
+        #fotos {
+            flex-direction: row;
+            flex-wrap: wrap; /* alinha as fotos lado a lado*/
+        }
+
+        #fotos h3 {
+            width:100%;
+            text-align:center;
+        }
+
+        #fotos img {
+            width:33.3333333%;
+        }
+
+        /*contato */
+
+        #contato {
+            flex-direction:row;
+            flex-wrap:wrap;
+            justify-content:space-around;
+            max-width:500px;
+            margin:0 auto;
+        }
+
+        #contato h2, #contato p {
+            width:100%;
+        }
+}
+
+/* Quando o site for carregado em uma tela maior que 768px
+(um celular e um tablet não tem mais que isso), todas as seções que necessitaram de ajuste
+utilizaram as informações do media queries e do resto do css*/
